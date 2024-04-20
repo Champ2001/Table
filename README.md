@@ -1,5 +1,9 @@
 # HireQuotient Assignment
 
+![image](https://github.com/Champ2001/Table/assets/95713320/c82fd92b-e577-4d4f-94f8-69164b639b32)
+![image](https://github.com/Champ2001/Table/assets/95713320/6effaf43-5dec-4331-b0f9-cb938f7b0391)
+
+
 ## Description:
 This project implements a React component called `AssetAccordion` using Material-UI. The component displays asset class information and allows users to expand and view details.
 
