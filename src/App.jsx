@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './index.css'
 
 import AssetAccordion from '../components/AssetAccordion';
 
@@ -26,7 +26,7 @@ const App = () => {
           }, {});
           
           // Now groupedData is an object where keys are asset classes and values are arrays of corresponding data
-          console.log(groupedData);
+          // console.log(groupedData);
           
           // Set groupedData to state or do whatever you need to do with it
           setGroupedData(groupedData);

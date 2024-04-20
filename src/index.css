@@ -1,3 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+  padding: 3px;
+}
+body{
+  background-color: #F0F5F9;
+}
+
+.MuiTableContainer-root {
+  background-color: #ffffff9c !important;
+  border-radius: 9px  !important;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important; */
+}
+
+.MuiButtonBase-root{
+  background-color: #5E53EC !important;
+}
+
+.MuiTypography-subtitle1{
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+.header{
+  font-weight: 650 !important;
+  opacity: 0.6;
+}
+
+
+/* .MuiCollapse-wrapperInner{
+  box-shadow: 10px  lightblue;
+}
+
+/* Table Header Styling */
+/* .MuiTableHead-root {
+  background-color: #0963bc !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  text-transform: uppercase ;
+}
+
+.MuiTableCell-root {
+  padding: 10px 16px !important;
+  border: none !important;
+}
+
+/* Table Row Styling */
+/* .MuiTableRow-root {
+  &:nth-child(odd) {
+    background-color: #fcfbf9 !important;
+    box-shadow: 10px #fcfbf9 !important;
+
+  }
+  &:nth-child(even) {
+    background-color: #fcfbf9 !important;
+  }
+}  */

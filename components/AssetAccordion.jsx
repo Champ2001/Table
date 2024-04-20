@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
@@ -15,14 +13,15 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-
 const AssetAccordion = ({ assetClass, data }) => {
   const [open, setOpen] = useState(false);
 
+  const totalPosts = data.length; // Calculate total number of posts
+
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label={`${assetClass} table`} className='text-red-950'>
-        <TableHead>
+    <TableContainer component={Paper} elevation={open ? 3 : 0} sx={{ backgroundColor: 'rgba(173, 216, 230, 0.3)' }}>
+      <Table aria-label={`${assetClass} table`} sx={{ minWidth: 650 }}>
+        <TableHead sx={{ opacity: 0.7 }}>
           <TableRow>
             <TableCell>
               <IconButton
@@ -33,7 +32,11 @@ const AssetAccordion = ({ assetClass, data }) => {
                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
               </IconButton>
             </TableCell>
-            <TableCell>{assetClass}:</TableCell>
+            <TableCell sx={{ paddingLeft: 0 ,left:85,position:'absolute'}}>
+              <Typography variant="subtitle1" color="primary">
+                {assetClass} ({totalPosts}) 
+              </Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -41,27 +44,24 @@ const AssetAccordion = ({ assetClass, data }) => {
             <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <Box sx={{ margin: 1 }}>
-                  <Typography variant="h6" gutterBottom component="div">
-                    Asset Details
-                  </Typography>
                   <Table size="small" aria-label="asset details">
                     <TableHead>
                       <TableRow>
-                        <TableCell>Name of the holding</TableCell>
-                        <TableCell>Ticker</TableCell>
-                        <TableCell>Average price</TableCell>
-                        <TableCell>Market Price</TableCell>
-                        <TableCell>Latest change percentage</TableCell>
+                        <TableCell><Typography variant="body2" className='header'>NAME OF HOLDING</Typography></TableCell>
+                        <TableCell><Typography variant="body2" className='header'>TICKER</Typography></TableCell>
+                        <TableCell><Typography variant="body2" className='header'>AVERAGE PRICE</Typography></TableCell>
+                        <TableCell><Typography variant="body2" className='header'>MARKET PRICE</Typography></TableCell>
+                        <TableCell><Typography variant="body2" className='header'>LATEST CHANGE PERCENTAGE</Typography></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                       {data.map((holding, index) => (
                         <TableRow key={index}>
-                          <TableCell>{holding.name}</TableCell>
-                          <TableCell>{holding.ticker}</TableCell>
-                          <TableCell>{holding.avg_price}</TableCell>
-                          <TableCell>{holding.market_price}</TableCell>
-                          <TableCell>{holding.latest_chg_pct}</TableCell>
+                          <TableCell><Typography variant="body2">{holding.name}</Typography></TableCell>
+                          <TableCell><Typography variant="body2">{holding.ticker}</Typography></TableCell>
+                          <TableCell><Typography variant="body2">{holding.avg_price}</Typography></TableCell>
+                          <TableCell><Typography variant="body2">{holding.market_price}</Typography></TableCell>
+                          <TableCell><Typography variant="body2">{holding.latest_chg_pct}</Typography></TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
