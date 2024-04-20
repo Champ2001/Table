@@ -1,8 +1,33 @@
-# React + Vite
+# HireQuotient Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description:
+This project implements a React component called `AssetAccordion` using Material-UI. The component displays asset class information and allows users to expand and view details.
 
-Currently, two official plugins are available:
+## Tech Stack:
+- React
+- Material-UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Approach:
+1. Created a functional component `AssetAccordion` to represent each asset class.
+2. Utilized useState hook to manage the state for expanding/collapsing asset details.
+3. Styled the component using Material-UI's styling system.
+4. Implemented dynamic rendering of asset details based on user interaction.
+5. Added functionality to display the total number of posts for each asset class.
+
+## Challenges:
+- Ensuring proper alignment and styling within the Material-UI framework.
+- Maintaining component modularity while adding custom functionality.
+- Handling state management for expanding/collapsing asset details.
+
+## Usage:
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Use the `AssetAccordion` component in your React application to display asset information with expandable details.
+
+## Contributing:
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+
+
+## Author:
+Sarnava Mohanta
