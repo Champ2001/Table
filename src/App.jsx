@@ -25,10 +25,9 @@ const App = () => {
             return acc;
           }, {});
           
-          // Now groupedData is an object where keys are asset classes and values are arrays of corresponding data
+          
           // console.log(groupedData);
           
-          // Set groupedData to state or do whatever you need to do with it
           setGroupedData(groupedData);
         } else {
           console.error("Invalid response format:", responseData);
